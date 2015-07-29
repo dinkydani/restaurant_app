@@ -62,10 +62,6 @@ describe('RestaurantApp', function () {
     });
   });
 
-  describe('renderMarkers', function () {
-
-  });
-
   describe('getDistance', function () {
     it('returns a the distance in km between two markers', function () {
       var marker   = L.marker([51.5233, -0.093295]);
@@ -96,6 +92,7 @@ describe('RestaurantApp', function () {
     it('returns a string with name and logo', function () {
       var content = restMap.getHeaderContent("Test", "test.gif");
       var expected = '<h2>Test</h2><img src="test.gif">'
+      expect(content).to.be(expected);
     });
   });
 
